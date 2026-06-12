@@ -1,68 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Currency Encyclopedia</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Currency Hub</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f4f4;
+}
+
+header{
+background:#0d47a1;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+nav{
+background:#1565c0;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+nav a{
+color:white;
+padding:15px;
+text-decoration:none;
+}
+
+nav a:hover{
+background:#0d47a1;
+}
+
+section{
+padding:40px;
+background:white;
+margin:15px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h2{
+margin-bottom:15px;
+color:#1565c0;
+}
+
+.currency-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+}
+
+.card{
+background:#e3f2fd;
+padding:20px;
+border-radius:8px;
+text-align:center;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+table,th,td{
+border:1px solid #ccc;
+}
+
+th,td{
+padding:10px;
+text-align:center;
+}
+
+.converter{
+max-width:400px;
+margin:auto;
+}
+
+input,button,textarea{
+width:100%;
+padding:10px;
+margin:8px 0;
+}
+
+button{
+background:#1565c0;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+button:hover{
+background:#0d47a1;
+}
+
+footer{
+background:#0d47a1;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:20px;
+}
+</style>
 </head>
+
 <body>
-  <header>
-    <h1>💱 Currency Encyclopedia</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="what-is-currency.html">What is Currency?</a>
-      <a href="history.html">History</a>
-      <a href="types.html">Types</a>
-      <a href="major-currencies.html">Major Currencies</a>
-      <a href="usd.html">USD</a>
-      <a href="eur.html">EUR</a>
-      <a href="gbp.html">GBP</a>
-      <a href="jpy.html">JPY</a>
-      <a href="inr.html">INR</a>
-      <a href="crypto.html">Cryptocurrency</a>
-      <a href="exchange.html">Exchange Rates</a>
-      <a href="forex.html">Forex Market</a>
-      <a href="glossary.html">Glossary</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <img src="images/currency-banner.jpg" alt="World currencies" class="hero-image">
-      <h2>Welcome to the World of Currencies</h2>
-      <p>Explore everything about money — from ancient barter systems to modern cryptocurrencies.</p>
-    </section>
+<header>
+<h1>🌍 World Currency Hub</h1>
+<p>Your Guide to Global Money & Exchange Rates</p>
+</header>
 
-    <!-- Cards Section -->
-    <section class="cards">
-      <div class="card">
-        <img src="images/history-currency.jpg" alt="History of Currency">
-        <h3>📜 History</h3>
-        <p>Learn how currency evolved over thousands of years.</p>
-        <a href="history.html">Read More →</a>
-      </div>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#currencies">Currencies</a>
+<a href="#rates">Rates</a>
+<a href="#history">History</a>
+<a href="#converter">Converter</a>
+<a href="#news">News</a>
+<a href="#contact">Contact</a>
+</nav>
 
-      <div class="card">
-        <img src="images/major-currencies.jpg" alt="Major World Currencies">
-        <h3>🌍 Major Currencies</h3>
-        <p>Discover the most traded currencies in the world.</p>
-        <a href="major-currencies.html">Read More →</a>
-      </div>
+<section id="home">
+<h2>Home</h2>
+<p>
+Welcome to World Currency Hub. Learn about international currencies,
+exchange rates, global markets and the history of money around the world.
+</p>
+</section>
 
-      <div class="card">
-        <img src="images/cryptocurrency.jpg" alt="Cryptocurrency">
-        <h3>₿ Cryptocurrency</h3>
-        <p>Understand digital currencies and blockchain.</p>
-        <a href="crypto.html">Read More →</a>
-      </div>
-    </section>
-  </main>
+<section id="about">
+<h2>About World Currencies</h2>
+<p>
+Currencies are systems of money used by countries for trade and commerce.
+Exchange rates determine how much one currency is worth compared to another.
+</p>
+</section>
 
-  <footer>
-    <p>&copy; 2025 Currency Encyclopedia. Educational Project.</p>
-  </footer>
+<section id="currencies">
+<h2>Major World Currencies</h2>
+
+<div class="currency-grid">
+
+<div class="card">
+<h3>USD</h3>
+<p>United States Dollar</p>
+</div>
+
+<div class="card">
+<h3>EUR</h3>
+<p>Euro</p>
+</div>
+
+<div class="card">
+<h3>GBP</h3>
+<p>British Pound</p>
+</div>
+
+<div class="card">
+<h3>JPY</h3>
+<p>Japanese Yen</p>
+</div>
+
+<div class="card">
+<h3>INR</h3>
+<p>Indian Rupee</p>
+</div>
+
+<div class="card">
+<h3>AUD</h3>
+<p>Australian Dollar</p>
+</div>
+
+</div>
+</section>
+
+<section id="rates">
+<h2>Sample Exchange Rates</h2>
+
+<table>
+<tr>
+<th>Currency</th>
+<th>Against USD</th>
+</tr>
+
+<tr>
+<td>EUR</td>
+<td>0.92</td>
+</tr>
+
+<tr>
+<td>GBP</td>
+<td>0.78</td>
+</tr>
+
+<tr>
+<td>INR</td>
+<td>86.50</td>
+</tr>
+
+<tr>
+<td>JPY</td>
+<td>145.20</td>
+</tr>
+
+<tr>
+<td>AUD</td>
+<td>1.48</td>
+</tr>
+
+</table>
+</section>
+
+<section id="history">
+<h2>History of Currency</h2>
+
+<p>
+The earliest currencies were metal coins introduced thousands of years ago.
+Paper money became common in China and later spread worldwide. Today,
+digital payments and cryptocurrencies are transforming global finance.
+</p>
+
+</section>
+
+<section id="converter">
+<h2>Currency Converter</h2>
+
+<div class="converter">
+
+<input type="number" id="amount" placeholder="Enter Amount">
+
+<select id="currency">
+<option value="86.5">USD to INR</option>
+<option value="0.92">USD to EUR</option>
+<option value="0.78">USD to GBP</option>
+</select>
+
+<button onclick="convert()">Convert</button>
+
+<h3 id="result"></h3>
+
+</div>
+</section>
+
+<section id="news">
+<h2>Currency News</h2>
+
+<ul>
+<li>Global central banks continue monitoring inflation.</li>
+<li>Digital currencies gain popularity worldwide.</li>
+<li>International trade impacts exchange rates daily.</li>
+<li>Financial markets remain sensitive to interest rates.</li>
+</ul>
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+
+<form>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea rows="5" placeholder="Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+
+</section>
+
+<footer>
+<p>© 2026 World Currency Hub | Educational Project</p>
+</footer>
+
+<script>
+function convert(){
+let amount=document.getElementById("amount").value;
+let rate=document.getElementById("currency").value;
+let result=amount*rate;
+
+document.getElementById("result").innerHTML=
+"Converted Value: "+result.toFixed(2);
+}
+</script>
+
 </body>
 </html>
